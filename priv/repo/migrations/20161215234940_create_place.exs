@@ -7,6 +7,7 @@ defmodule PickyBeardApi.Repo.Migrations.CreatePlace do
       add :price, :string
       add :location, :string
       add :cuisene, :string
+      add :fans, references(:users)
 
       timestamps()
     end
