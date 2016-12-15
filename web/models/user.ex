@@ -5,8 +5,8 @@ defmodule PickyBeardApi.User do
     field :name, :string
     field :provider, :string
     field :token, :string
-    has_many :friends, PickyBeardApi.User
     many_to_many :groups, PickyBeardApi.Groups
+    has_many :favorites, PickyBeardApi.Places
 
     timestamps()
   end
