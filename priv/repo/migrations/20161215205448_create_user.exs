@@ -6,6 +6,8 @@ defmodule PickyBeardApi.Repo.Migrations.CreateUser do
       add :name, :string
       add :provider, :string
       add :token, :string
+      add :groups, references(:groups)
+      add :favorites, references(:places)
 
       timestamps()
     end

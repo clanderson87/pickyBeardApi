@@ -3,7 +3,8 @@ defmodule PickyBeardApi.Repo.Migrations.CreateGroup do
 
   def change do
     create table(:groups) do
-
+      add :members, references(:users)
+      
       timestamps()
     end
 
