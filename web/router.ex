@@ -20,7 +20,11 @@ defmodule PickyBeardApi.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PickyBeardApi do
-  #   pipe_through :api
-  # end
+  scope "/api", PickyBeardApi do
+    pipe_through :api
+
+    resources "/users", UserController, except: [:new, :edit]
+    resources "/groups", GroupController, except: [:new, :edit]
+    resources "/places", PlaceController, except: [:new, :edit]
+  end
 end

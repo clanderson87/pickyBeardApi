@@ -6,6 +6,7 @@ defmodule PickyBeardApi.Place do
     field :price, :string
     field :location, :string
     field :cuisene, :string
+    has_many :fans, PickyBeardApi.User
 
     timestamps()
   end
